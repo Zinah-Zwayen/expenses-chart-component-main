@@ -1,0 +1,206 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+$Soft-red: hsl(10, 79%, 65%);
+$Cyan: hsl(186, 34%, 60%);
+$Dark-brown: hsl(25, 47%, 15%);
+$Medium-brown: hsl(28, 10%, 53%);
+$Cream: hsl(27, 66%, 92%);
+$Very-pale-orange: hsl(33, 100%, 98%);
+
+
+html{
+    font-family: 'DM Sans', sans-serif;
+    font-size: 18px;
+    background: $Cream;
+    overflow-X: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top: 5rem;
+
+    &::-webkit-scrollbar{
+        width: 1rem;
+    }
+    &::-webkit-scrollbar-track{
+        background: $Very-pale-orange;
+    }
+    &::-webkit-scrollbar-thumb{
+        background: $Medium-brown;
+    }
+}
+
+@mixin grid($val){
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax($val, 1fr));
+}
+
+body{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+}
+// =========== start balance section ===========
+.balance{
+    background: $Soft-red;
+    border-radius:.5rem;
+    -webkit-border-radius:.5rem;
+    -moz-border-radius:.5rem;
+    -ms-border-radius:.5rem;
+    -o-border-radius:.5rem;
+    color: $Very-pale-orange;
+    padding: 1rem;
+    margin-bottom: .5rem;
+    
+    @include grid(20rem);
+    .balance-box{
+        p{
+            font-size: .8rem;
+        }
+        span{
+            font-weight: bold;
+            font-size: 1.3rem;
+        }
+    }
+    .image-box{
+        width: 2.5rem;
+        position: absolute;
+        top: 8%;
+        right: 5%;
+        img{
+            max-width: 100%;
+            
+        }
+    }
+}
+
+// =========== end balance section ===========
+
+// =========== start spending section ===========
+.spending{
+    background: $Very-pale-orange;
+    width: 22rem;
+    height: 23rem;
+    border-radius:.5rem;
+    -webkit-border-radius:.5rem;
+    -moz-border-radius:.5rem;
+    -ms-border-radius:.5rem;
+    -o-border-radius:.5rem;
+    color: $Dark-brown;
+    padding: 1rem;
+    margin-bottom: .5rem;
+    .header{
+        h1{
+        font-size: 1.2rem;
+        margin-bottom: 1.5rem;
+        }
+    }
+    .Chart{
+        display: flex;
+        gap: 1rem;
+        align-items: flex-end;
+        height: 50%;
+        margin-bottom: 1.5rem;
+            &>div{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                position: relative;
+                &>div.rect{
+                    width: 32px;
+                    height: 50px;
+                    border-radius: 5px;
+                    -webkit-border-radius: 5px;
+                    -moz-border-radius: 5px;
+                    -ms-border-radius: 5px;
+                    -o-border-radius: 5px;
+                    background-color: $Soft-red;
+                    cursor: pointer;
+                    transition: .3s ease-in;
+                    -webkit-transition: .3s ease-in;
+                    -moz-transition: .3s ease-in;
+                    -ms-transition: .3s ease-in;
+                    -o-transition: .3s ease-in;
+                }
+            }
+        }
+    .footer{
+        @include grid(7rem);
+        margin-top: 2rem;
+        .total{
+            p{
+                color: $Medium-brown;
+                font-size: .8rem;
+            }
+            span{
+                font-weight: bold;
+                font-size: 1.5rem;
+            }
+        }
+        .percintage{
+            font-size: 1rem;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            margin-top: .5rem;
+            span{
+                font-weight: bold;
+            }
+            p{
+                color: $Medium-brown;
+                font-size: .8rem;
+            }
+        }
+    }
+}
+.show{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    position: absolute;
+    width: 45px;
+    height: 25px;
+    background-color: black;
+    color: $Cream;
+}
+
+// =========== end spending section ===========
+
+
+// =============== media queries ============
+
+@media (max-width: 768px){
+    .balance{
+        @include grid(15rem);
+    }
+    .spending{
+        width: 20rem;
+        .Chart{
+            gap: .8rem;
+            
+        }
+    }
+}
+// ========= footer ================
+    .attribution {
+        font-size: 11px;
+        text-align: center; 
+        a {
+            color: hsl(228, 45%, 44%); 
+        }
+    }

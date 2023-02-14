@@ -1,0 +1,177 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "DM Sans", sans-serif;
+  font-size: 18px;
+  background: hsl(27deg, 66%, 92%);
+  overflow-X: hidden;
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
+}
+html::-webkit-scrollbar {
+  width: 1rem;
+}
+html::-webkit-scrollbar-track {
+  background: hsl(33deg, 100%, 98%);
+}
+html::-webkit-scrollbar-thumb {
+  background: hsl(28deg, 10%, 53%);
+}
+
+body {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+}
+
+.balance {
+  background: hsl(10deg, 79%, 65%);
+  border-radius: 0.5rem;
+  -webkit-border-radius: 0.5rem;
+  -moz-border-radius: 0.5rem;
+  -ms-border-radius: 0.5rem;
+  -o-border-radius: 0.5rem;
+  color: hsl(33deg, 100%, 98%);
+  padding: 1rem;
+  margin-bottom: 0.5rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+}
+.balance .balance-box p {
+  font-size: 0.8rem;
+}
+.balance .balance-box span {
+  font-weight: bold;
+  font-size: 1.3rem;
+}
+.balance .image-box {
+  width: 2.5rem;
+  position: absolute;
+  top: 8%;
+  right: 5%;
+}
+.balance .image-box img {
+  max-width: 100%;
+}
+
+.spending {
+  background: hsl(33deg, 100%, 98%);
+  width: 22rem;
+  height: 23rem;
+  border-radius: 0.5rem;
+  -webkit-border-radius: 0.5rem;
+  -moz-border-radius: 0.5rem;
+  -ms-border-radius: 0.5rem;
+  -o-border-radius: 0.5rem;
+  color: hsl(25deg, 47%, 15%);
+  padding: 1rem;
+  margin-bottom: 0.5rem;
+}
+.spending .header h1 {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+.spending .Chart {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-end;
+  height: 50%;
+  margin-bottom: 1.5rem;
+}
+.spending .Chart > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.spending .Chart > div > div.rect {
+  width: 32px;
+  height: 50px;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  background-color: hsl(10deg, 79%, 65%);
+  cursor: pointer;
+  transition: 0.3s ease-in;
+  -webkit-transition: 0.3s ease-in;
+  -moz-transition: 0.3s ease-in;
+  -ms-transition: 0.3s ease-in;
+  -o-transition: 0.3s ease-in;
+}
+.spending .footer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(7rem, 1fr));
+  margin-top: 2rem;
+}
+.spending .footer .total p {
+  color: hsl(28deg, 10%, 53%);
+  font-size: 0.8rem;
+}
+.spending .footer .total span {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+.spending .footer .percintage {
+  font-size: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin-top: 0.5rem;
+}
+.spending .footer .percintage span {
+  font-weight: bold;
+}
+.spending .footer .percintage p {
+  color: hsl(28deg, 10%, 53%);
+  font-size: 0.8rem;
+}
+
+.show {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  position: absolute;
+  width: 45px;
+  height: 25px;
+  background-color: black;
+  color: hsl(27deg, 66%, 92%);
+}
+
+@media (max-width: 768px) {
+  .balance {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  }
+  .spending {
+    width: 20rem;
+  }
+  .spending .Chart {
+    gap: 0.8rem;
+  }
+}
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228deg, 45%, 44%);
+}/*# sourceMappingURL=style.css.map */
